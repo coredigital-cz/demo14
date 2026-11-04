@@ -67,3 +67,15 @@ section{padding:78px 0}.soft{background:var(--soft)}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn:hover,.card:hover{transform:none}}
 @media (max-width:960px){.hero .grid,.cta .grid,.contact{grid-template-columns:1fr;gap:34px}.grid3,.steps{grid-template-columns:1fr 1fr}.strip .in{grid-template-columns:1fr 1fr}.nav,.hdr-tel,.hdr-cta .btn{display:none}.burger{display:block}.ftr .g{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){section{padding:56px 0}.grid3,.grid2,.steps{grid-template-columns:1fr}.f2{grid-template-columns:1fr}.topbar .wrap span:last-child{display:none}.bar{display:flex}body{padding-bottom:76px}.hero{padding:40px 0 52px}.formcard{padding:22px}.ftr .g{grid-template-columns:1fr}.hdr .wrap{height:64px}.van{display:none}.strip .in{grid-template-columns:1fr}}
+
+.prog{display:flex;gap:6px;margin:4px 0 6px}.prog i{flex:1;height:6px;border-radius:99px;background:var(--line);transition:background .3s}.prog i.on{background:var(--amber)}
+.plabel{font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
+.pane{display:none}.pane.on{display:block;animation:pin .3s}
+@keyframes pin{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.opts.one{grid-template-columns:1fr}
+.opt{position:relative}.opt input{position:absolute;opacity:0;inset:0;cursor:pointer;width:100%;height:100%;margin:0}
+.opt span{display:flex;align-items:center;gap:9px;padding:13px 14px;border:1.5px solid var(--line);border-radius:11px;background:#fbfcfe;font-weight:600;font-size:.92rem;color:var(--navy);line-height:1.25;transition:border .2s,background .2s}
+.opt input:checked+span{border-color:var(--amber-d);background:#fff6d9}.opt input:focus-visible+span{box-shadow:0 0 0 4px rgba(18,48,90,.15)}
+.hint{font-size:.82rem;color:var(--muted);margin:2px 0 10px}
+.wnav{display:flex;gap:10px;margin-top:16px}.wnav .btn{flex:1}.wnav .back{flex:0 0 auto;padding-left:18px;padding-right:18px}
+.hero .grid>*,.cta .grid>*,.contact>*,.fgrid>*,.f2>*,.opts>*{min-width:0}.formcard{max-width:100%}.opts.one .opt span{flex-direction:column;align-items:flex-start;gap:3px}.opts.one .opt em{font-style:normal;font-weight:500;font-size:.84rem;color:var(--muted)}.formcard h3.q{font-size:1.1rem;color:var(--navy);margin-bottom:12px}

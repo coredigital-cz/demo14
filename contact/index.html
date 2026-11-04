@@ -40,27 +40,51 @@
 </div>
 <div class="formcard" id="ct-form">
   <h2>Request a quote</h2>
-  <p class="fsub">Fill in the details below and we will get back to you.</p>
-  <form data-lead novalidate>
-    <div class="ferr">Please check your phone number and both locations, then try again.</div>
+  <p class="fsub">5 quick steps. We come back to you with a price.</p>
+  <form data-wizard novalidate>
+    <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    <div class="plabel">Step 1 of 5 · Where to?</div>
+    <div class="ferr" role="alert"></div>
     <div class="fok" role="status"></div>
     <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <div class="fgrid">
-      <div class="f2">
-        <div class="field"><label for="ct-f">Moving from <i>*</i></label><input id="ct-f" name="from" type="text" placeholder="Postcode or town" autocomplete="postal-code"></div>
-        <div class="field"><label for="ct-t">Moving to <i>*</i></label><input id="ct-t" name="to" type="text" placeholder="Postcode or town"></div>
-      </div>
-      <div class="field"><label for="ct-w">What are you moving?</label>
-        <select id="ct-w" name="what"><option value="">Choose one</option><option>A few items / single item</option><option>Studio or 1-bed flat</option><option>2-bed home</option><option>3-bed home or larger</option><option>Office or commercial move</option><option>Not sure yet</option></select></div>
-      <div class="f2">
-        <div class="field"><label for="ct-p">Mobile / phone <i>*</i></label><input id="ct-p" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="07xxx xxxxxx"></div>
-        <div class="field"><label for="ct-n">Name <small>(optional)</small></label><input id="ct-n" name="name" type="text" autocomplete="name" placeholder="Your name"></div>
-      </div>
-      <div class="field"><label for="ct-d">Moving date <small>(optional)</small></label><input id="ct-d" name="date" type="date"></div>
-      <div class="field"><label for="ct-m">Anything we should know? <small>(optional)</small></label><textarea id="ct-m" name="message" rows="3" placeholder="Stairs, lift, parking, large or fragile items..."></textarea></div>
-      <button class="btn btn-p btn-blk" type="submit">Get my free quote</button>
-      <p class="fnote">Free and no obligation. Or call <a href="tel:+447710861506">07710 861506</a></p>
+    <div class="pane on"><div class="fgrid">
+      <div class="field"><label for="ct-f">Moving from <i>*</i></label><input id="ct-f" name="from" type="text" placeholder="Postcode or town"></div>
+      <div class="field"><label for="ct-t">Moving to <i>*</i></label><input id="ct-t" name="to" type="text" placeholder="Postcode or town"></div>
+      <div class="wnav"><button class="btn btn-p" type="button" data-next>Next</button></div>
+    </div></div>
+    <div class="pane"><h3 class="q">What are you moving?</h3>
+      <div class="opts"><label class="opt"><input type="radio" name="size" value="A few items / single item"><span>A few items / single item</span></label><label class="opt"><input type="radio" name="size" value="Studio or 1-bed flat"><span>Studio or 1-bed flat</span></label><label class="opt"><input type="radio" name="size" value="2-bed home"><span>2-bed home</span></label><label class="opt"><input type="radio" name="size" value="3-bed home or larger"><span>3-bed home or larger</span></label><label class="opt"><input type="radio" name="size" value="Office or commercial move"><span>Office or commercial move</span></label><label class="opt"><input type="radio" name="size" value="Not sure yet"><span>Not sure yet</span></label></div>
+      <p class="hint" style="margin-top:14px">Any large items? <small>(optional)</small></p>
+      <div class="opts"><label class="opt"><input type="checkbox" name="items" value="Sofa"><span>Sofa</span></label><label class="opt"><input type="checkbox" name="items" value="Bed / mattress"><span>Bed / mattress</span></label><label class="opt"><input type="checkbox" name="items" value="Wardrobe"><span>Wardrobe</span></label><label class="opt"><input type="checkbox" name="items" value="Fridge / washer"><span>Fridge / washer</span></label><label class="opt"><input type="checkbox" name="items" value="Boxes / bags"><span>Boxes / bags</span></label><label class="opt"><input type="checkbox" name="items" value="Desk / office"><span>Desk / office</span></label><label class="opt"><input type="checkbox" name="items" value="Bike"><span>Bike</span></label><label class="opt"><input type="checkbox" name="items" value="Other large items"><span>Other large items</span></label></div>
+      <div class="wnav"><button class="btn btn-o back" type="button" data-back>Back</button><button class="btn btn-p" type="button" data-next>Next</button></div>
     </div>
+    <div class="pane"><h3 class="q">Choose your service</h3>
+      <div class="opts one">
+        <label class="opt"><input type="radio" name="service" value="Basic - you carry, we drive" checked><span><b>Basic</b><em>Van and driver. You pack, carry and load your items; we drive and deliver.</em></span></label>
+        <label class="opt"><input type="radio" name="service" value="Premium - full service, we carry everything"><span><b>Premium · Full service</b><em>Our crew dismantles your furniture and carries everything out, loads, drives, unloads and carries it in.</em></span></label>
+      </div>
+      <p class="hint" style="margin-top:12px">Not sure? Pick one now and we will confirm the details with you.</p>
+      <div class="wnav"><button class="btn btn-o back" type="button" data-back>Back</button><button class="btn btn-p" type="button" data-next>Next</button></div>
+    </div>
+    <div class="pane"><div class="fgrid">
+      <div class="field"><label for="ct-d">Moving date <small>(optional)</small></label><input id="ct-d" name="date" type="date"></div>
+      <label class="opt"><input type="checkbox" name="flex" value="1"><span>My dates are flexible</span></label>
+      <div class="f2">
+        <div class="field"><label for="ct-af">Pick-up access</label><select id="ct-af" name="access_from"><option value="">Choose</option><option>Ground floor / house</option><option>Stairs (no lift)</option><option>Lift available</option><option>Not sure</option></select></div>
+        <div class="field"><label for="ct-at">Drop-off access</label><select id="ct-at" name="access_to"><option value="">Choose</option><option>Ground floor / house</option><option>Stairs (no lift)</option><option>Lift available</option><option>Not sure</option></select></div>
+      </div>
+      <div class="field"><label for="ct-m">Anything else? <small>(optional)</small></label><textarea id="ct-m" name="message" rows="2" placeholder="Parking, fragile or very heavy items..."></textarea></div>
+      <div class="wnav"><button class="btn btn-o back" type="button" data-back>Back</button><button class="btn btn-p" type="button" data-next>Next</button></div>
+    </div></div>
+    <div class="pane"><div class="fgrid">
+      <div class="field"><label for="ct-p">Mobile / phone <i>*</i></label><input id="ct-p" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="07xxx xxxxxx"></div>
+      <div class="f2">
+        <div class="field"><label for="ct-n">Name <small>(optional)</small></label><input id="ct-n" name="name" type="text" autocomplete="name" placeholder="Your name"></div>
+        <div class="field"><label for="ct-e">Email <small>(optional)</small></label><input id="ct-e" name="email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="wnav"><button class="btn btn-o back" type="button" data-back>Back</button><button class="btn btn-p" type="submit">Get my free quote</button></div>
+      <p class="fnote">Free and no obligation. Or call <a href="tel:+447710861506">07710 861506</a></p>
+    </div></div>
   </form>
 </div>
 </div></div></section>
