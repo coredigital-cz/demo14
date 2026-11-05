@@ -79,3 +79,5 @@ section{padding:78px 0}.soft{background:var(--soft)}
 .hint{font-size:.82rem;color:var(--muted);margin:2px 0 10px}
 .wnav{display:flex;gap:10px;margin-top:16px}.wnav .btn{flex:1}.wnav .back{flex:0 0 auto;padding-left:18px;padding-right:18px}
 .hero .grid>*,.cta .grid>*,.contact>*,.fgrid>*,.f2>*,.opts>*{min-width:0}.formcard{max-width:100%}.opts.one .opt span{flex-direction:column;align-items:flex-start;gap:3px}.opts.one .opt em{font-style:normal;font-weight:500;font-size:.84rem;color:var(--muted)}.formcard h3.q{font-size:1.1rem;color:var(--navy);margin-bottom:12px}
+
+.legal.svc h2:first-child{margin-top:0}.formcard{scroll-margin-top:90px}
